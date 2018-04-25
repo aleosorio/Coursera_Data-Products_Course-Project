@@ -17,7 +17,7 @@ shinyUI(fluidPage(
         sidebarLayout(
                 sidebarPanel(
                         
-                        #  Input: attribute to compare
+                        #  Drop down menu with possible attributes to compare
                         selectInput("attrib",
                                     "Attribute to compare:",
                                     choices = dropdown),
@@ -25,7 +25,7 @@ shinyUI(fluidPage(
                         helpText("Choose which attribute to compare among flower species")
                 ),
                 
-        # Plot containing generated histograms
+        # Plot containing generated boxplots, from server.R
                 mainPanel(
                         plotOutput("flowerPlot")
                 )
