@@ -12,9 +12,16 @@ library(tidyverse)
 
 ## Shiny Application: Its URL and Main Objective
 
-You can find the app in the following URL: <https://osorio.shinyapps.io/Course_Project/>.
+You can find the app in the following URL:
+
+<https://osorio.shinyapps.io/Course_Project/>.
+
+You can also find the app code in the following URL:
+
+<https://github.com/aleosorio/Coursera_Data-Products_Course-Project>.
 
 It's main objective consists on comparing, through boxplots, one attribute among the following plant species:
+
 - Setosa
 - Versicolor
 - Virginica
