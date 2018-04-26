@@ -11,7 +11,7 @@ shinyServer(function(input, output) {
                 filter(dataset, attribute == input$attrib)
         })
         
-        # Generate plot based on input$attrib from ui.R
+        # Generate plot based on reactive data and input$attrib from ui.R
         output$flowerPlot <- renderPlot({
                 
                 ggplot(finaldata(), aes(Species, value)) +
