@@ -1,0 +1,38 @@
+---
+title: 'Course Project: Shiny Application and Reproducible Pitch'
+author: "Alejandro Osorio"
+date: "April 25th, 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+## Shiny Application: Its URL and Main Objective
+
+You can find the app in the following URL: <https://osorio.shinyapps.io/Course_Project/>.
+
+It's main objective consists on comparing, through boxplots, one attribute among the following plant species:
+- Setosa
+- Versicolor
+- Virginica
+
+## A Brief Summary of the Data
+
+```{r cars, echo = TRUE}
+summary(iris)
+```
+
+## An Example for Sepal Length Comparison
+
+```{r pressure, echo = FALSE}
+dataset <- gather(iris, key = attribute, value = value, -Species)
+finaldata <- filter(dataset, attribute == "Sepal.Length")
+ggplot(finaldata, aes(Species, value)) +
+        geom_boxplot(aes(color = Species), alpha = 0.5) +
+        labs(title = "Sepal.Length")
+```
+
+## Thank You!
